@@ -12,6 +12,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\Table(name="admin")
  * @ORM\Entity(repositoryClass="SA\CoreBundle\Repository\AdminRepository")
  */
+
 class Admin implements UserInterface
 {
     /**
