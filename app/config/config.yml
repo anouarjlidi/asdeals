@@ -1,7 +1,8 @@
 imports:
     - { resource: parameters.yml }
+    - { resource: assets_version.yml }
     - { resource: security.yml }
-    - { resource: services.yml }
+    - { resource: services/twig.xml }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -10,7 +11,7 @@ parameters:
 
 framework:
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -38,6 +39,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    globals:
+        assets_hash:          "%assets_hash%"
 
 # Doctrine Configuration
 doctrine:
@@ -68,3 +71,21 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+    
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+
+sonata_admin:
+    title_logo: logo/small_bg_white.jpg
+    templates:
+        layout:  admin/layout.html.twig
+    security:
+        handler: sonata.admin.security.handler.role
+
+assetic:
+    filters:
+        scssphp:
+            formatter: 'Leafo\ScssPhp\Formatter\Compressed'

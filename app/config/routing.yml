@@ -1,7 +1,22 @@
-app:
-    resource: "@AppBundle/Controller/"
+core:
+    resource: "@CoreBundle/Controller/"
     type:     annotation
-_sonata_admin:
+    prefix:   /
+
+app:
+    resource: "@CoreBundle/Controller/"
+    type:     annotation
+
+admin_dashboard:
+    resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
+    prefix:   "/admin"
+
+admin_crud:
     resource: .
-    type: sonata_admin
-    prefix: /admin
+    type:     sonata_admin
+    prefix:   "/admin"
+
+app_admin:
+    resource: "@CoreBundle/Controller/Admin"
+    type:     "annotation"
+    prefix:   "/admin"
