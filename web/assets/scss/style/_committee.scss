@@ -1,0 +1,234 @@
+.committee {
+    margin: 0 0 100px 0;
+
+    &__form {
+        width: 75%;
+        margin: 0 auto;
+
+        &--trunc {
+            width: 97.5%;
+        }
+
+        &__gender {
+            label {
+                font-size: 18px;
+                margin: 0 30px 0 8px;
+            }
+        }
+
+        &__zip_code {
+            width: 20%;
+            margin-top: 18px;
+
+            input {
+                width: 100%;
+            }
+        }
+
+        &__city {
+            width: 40%;
+            margin-top: 18px;
+
+            select {
+                width: 85%;
+                margin-left: 10%;
+            }
+
+            input {
+                width: 85%;
+                margin-left: 10%;
+            }
+        }
+
+        &__country {
+            width: 40%;
+
+            label {
+                margin-left: 5%;
+            }
+            select {
+                width: 90%;
+                margin-left: 5%;
+            }
+        }
+
+        &__profession {
+            select {
+                width: 95%;
+            }
+        }
+
+        &__conditions {
+            font-size: 18px;
+
+            input {
+                margin-right: 8px;
+            }
+
+            &__text {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    &--mentions {
+        width: 70%;
+        font-size: 12px;
+        text-align: justify;
+        margin: 30px auto 0;
+        color: #737373;
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    &__aside {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__hosts {
+        li {
+            padding: 10px 0;
+        }
+    }
+
+    &__timeline {
+        &__item {
+            padding: 30px 0;
+            border-bottom: 1px solid $gray--light;
+        }
+    }
+
+    &__card {
+        margin: 20px 0;
+
+        h5 {
+            border-top: 1px solid $gray--light;
+            padding: 15px 0 10px 0;
+            margin: 0;
+            @include text--small;
+            @include text--all-caps;
+            font-weight: normal;
+
+            svg {
+                width: 18px;
+            }
+        }
+
+        .committee-host {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__social {
+        &--facebook {
+            .fa:before {
+                content: '\f230';
+            }
+        }
+        &--google_plus {
+            .fa:before {
+                content: '\f2b3';
+            }
+        }
+    }
+
+    &-event {
+        background: $gray--lighter;
+        height: 200px;
+        width: 750px;
+        margin: 0 auto;
+        display: flex;
+        margin-top: 20px;
+
+        &-map {
+            width: 200px;
+            height: 200px;
+            background: $gray;
+        }
+
+        &-details {
+            padding: 25px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.committee__event {
+    &__header {
+        margin-top: 20px;
+        background-color: $blue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;
+
+        &__titles {
+            margin-right: 25px;
+        }
+
+        &__cta {
+            min-width: 200px;
+
+            &__social {
+                margin-top: 15px;
+
+                li .fa {
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+
+            &__titles,
+            &__cta {
+                width: 100%;
+            }
+
+            &__titles {
+                margin: 0 0 30px;
+            }
+        }
+    }
+
+    &__map {
+        height: 350px;
+        margin-bottom: 60px;
+        border-bottom: 1px solid $gray--light;
+    }
+
+    &__schedule {
+        padding: 30px;
+
+        .fa {
+            margin-right: 8px;
+            width: 15px;
+            text-align: center;
+        }
+    }
+}
