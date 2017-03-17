@@ -69,5 +69,4 @@ class AdminSecurityController extends Controller
     public function logout()
     {
     }
-
 }
