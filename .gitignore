@@ -14,5 +14,4 @@
 !var/SymfonyRequirements.php
 /vendor/
 /.idea
-/bower_components/
 /node_modules/
