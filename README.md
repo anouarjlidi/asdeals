@@ -1,4 +1,4 @@
-<a href="https://styleci.io/repos/84189596"><img src="https://styleci.io/repos/84189596/shield?branch=master" alt="StyleCI"></a>
+<a href="https://styleci.io/repos/84189596"><img src="https://styleci.io/repos/84189596/shield?branch=master" alt="StyleCI"></a><br/>
 Symfony Standard Edition
 ========================
 
